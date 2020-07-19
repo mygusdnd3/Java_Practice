@@ -32,6 +32,7 @@ public class Ex_Test_04 {
 		
 		
 		
+		
 		//		System.out.println(min);
 //		double sec = min / 60;
 //		System.out.println(sec);
