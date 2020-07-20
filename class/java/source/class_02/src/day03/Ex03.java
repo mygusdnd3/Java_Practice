@@ -27,7 +27,7 @@ public class Ex03 {
 		int c = sc.nextInt();
 		
 		int test= (a>b)?(a>c)?a:b:c;
-		int test2= (a<b)?(b>c)?a:b:c;
+		int test2= (b>a)?(b>c)?a:b:c;
 		int test3= (c>a)?(c>b)?a:b:c;
 		
 		System.out.printf("큰 수의 나열 %d %d %d",test,test2,test3);
