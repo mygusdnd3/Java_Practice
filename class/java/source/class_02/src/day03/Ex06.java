@@ -28,13 +28,17 @@ public class Ex06 {
 					//	()?():()
 		 //chkBoard =((getBoard>0)&&(getBoard>=15))?(++chkBoard):(chkBoard=1));
 		 //int chk =(getBoard>0)?(getBoard>=15)?(getBoard%canBoard):(chkBoard=1):(chkBoard=0);
-		 int tmp = (getBoard>0)?((getBoard>15)?(getBoard>canBoard)?(++chkBoard):(1):(1)):(chkBoard=0);
-		
+		 int tmp = (getBoard>0)?((getBoard>15)?(getBoard>canBoard)?(chkBoard = ( getBoard%canBoard)+1):(1):(1)):(chkBoard=0);
+	//	int tmp2 = (getBoard>0)?(getBoard>=15)?(chkBoard = ( getBoard%canBoard)+1):(1):(0);
+				//int tmp2 = (getBoard>0)?(getBoard>=15)?(chkBoard = ( getBoard%canBoard)+1):(1"2번x"):(1번x)
 		 
-		 System.out.printf("입력한 값 [%d] 필요 게시판 수 [%d]",getBoard,tmp);
+		 System.out.printf("입력한 값 [%d] 필요 게시판 수 [%d]",getBoard,tmp2);
 		 
 //		 if(getBoard>0) {
 //		 if(getboard>=15) {
+//		 }
+//		 if(getBoard %canBoard!=0) {
+//			 chkBoard = (getBoard %canBoard)+1;
 //		 }
 //			 else {
 //				 chkBoard +=1;

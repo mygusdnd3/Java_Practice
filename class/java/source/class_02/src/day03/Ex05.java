@@ -1,5 +1,6 @@
 package day03;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -25,17 +26,38 @@ import java.util.Scanner;
  *
  *		문자열만 꺼내는방법
  *			문자열.charAt(0)
+ *
+ *		랜덤하게 문자를 발생시키는방법
+ *
+ *		Math.random();
+ *
+ *		(int)(Math.ramdom() * (큰수 - 작은수 +1))+작은수
+ *
+ *		1~10사이의 정수를 랜덤하게 발생시켜본다
+ *		
+ *		(int)(Math.Random())*(10-1+1))+1
  */
 public class Ex05 {
 	public static void main(String[] args) {
+		
+		
+		System.out.println(Math.random());
+		double a = Math.random();
+		System.out.println(a);
+		Random r = new Random();
+		int a = r.nextInt(100);
 		Scanner sc = new Scanner(System.in);
 		//()?():()
-		 System.out.println("영어를 입력하세요 : ");
+		System.out.println("영어를 입력하세요 : ");
 		String strDump = sc.nextLine();
+		
+		
 		char str = strDump.charAt(0);
 		sc.close();
 		int output1 = ((str>='A')&&(str<='Z'))?(str+32):
 					  ((str>='a')&&(str<='z'))?(str-32):str;
 		System.out.println((char)output1);
+		
+		
 	}
 }

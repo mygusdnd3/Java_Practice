@@ -8,6 +8,7 @@ repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_.eclipseextension/uri=file\:/C\:/Users/Admin/Desktop/\uD559\uC6D0/Java_Practice/class/app/eclipse/.eclipseextension
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_.eclipseextension/version=1
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/description=
+repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/enabled=true
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/isSystem=true
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/name=dropins
 repositories/file\:_C\:_Users_Admin_Desktop_\uD559\uC6D0_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/provider=
@@ -23,6 +24,7 @@ repositories/file\:_D\:_Java_Practice_class_app_eclipse_.eclipseextension/suffix
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_.eclipseextension/type=org.eclipse.equinox.p2.extensionlocation.metadataRepository
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_.eclipseextension/uri=file\:/D\:/Java_Practice/class/app/eclipse/.eclipseextension
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_.eclipseextension/version=1
+repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/enabled=true
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/isSystem=true
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/name=dropins
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/suffix=content.xml
@@ -31,13 +33,16 @@ repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclips
 repositories/file\:_D\:_Java_Practice_class_app_eclipse_configuration_org.eclipse.osgi_180_data_listener_1925729951/version=1.0.0
 repositories/http\:__download.eclipse.org_eclipse_updates_4.16/count=1
 repositories/http\:__download.eclipse.org_eclipse_updates_4.16/enabled=true
+repositories/http\:__download.eclipse.org_eclipse_updates_4.16/isSystem=false
 repositories/http\:__download.eclipse.org_eclipse_updates_4.16/nickname=The Eclipse Project Updates
 repositories/http\:__download.eclipse.org_eclipse_updates_4.16/uri=http\://download.eclipse.org/eclipse/updates/4.16
 repositories/http\:__download.eclipse.org_releases_2020-06/count=1
 repositories/http\:__download.eclipse.org_releases_2020-06/enabled=true
+repositories/http\:__download.eclipse.org_releases_2020-06/isSystem=false
 repositories/http\:__download.eclipse.org_releases_2020-06/nickname=2020-06
 repositories/http\:__download.eclipse.org_releases_2020-06/uri=http\://download.eclipse.org/releases/2020-06
 repositories/http\:__download.eclipse.org_releases_latest/count=1
 repositories/http\:__download.eclipse.org_releases_latest/enabled=true
+repositories/http\:__download.eclipse.org_releases_latest/isSystem=false
 repositories/http\:__download.eclipse.org_releases_latest/nickname=Latest Eclipse Release
 repositories/http\:__download.eclipse.org_releases_latest/uri=http\://download.eclipse.org/releases/latest
