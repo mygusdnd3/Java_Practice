@@ -15,16 +15,18 @@ package my_practice;
  */
 public class HomeWork01 {
 	public static void main(String[] args) {
-		for (int line = 0; line < 4; line++) {
-			for (int dan = 2; dan < 10; dan++) {
-				System.out.println("\t *** " + dan + " 단 ***");
-				
-				for (int i = 0; i < 9; i++) {
-
-					System.out.printf("\t%2d x %2d = %2d\n", dan, i, dan * i);
-				}
-				
-			}
+		for(int i = 2; i<10; i++) {
+			System.out.print("\t***"+i+"단***" );
 		}
+		System.out.println();
+		for(int j = 2; j<10;j++) {
+			for(int k = 2; k<10; k++) {
+				System.out.print("\t"+k+"x"+j+"="+j*k+"\t");
+			}
+			System.out.println();
+		}
+		
+		
+		
 	}
 }
