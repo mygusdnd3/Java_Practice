@@ -34,8 +34,11 @@ public class Ex03 {
 				int num4 = (int) (Math.random() * 100 + 1);
 				cod[j] = num3;
 				
-			}				
-		}System.out.println(cod[3]);
+			}
+			System.out.println(i+"번"+"수학"+suhak[]);
+		}
+		
+		System.out.println(cod[3]);
 		System.out.println("*****");
 	}
 
