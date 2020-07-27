@@ -1,12 +1,26 @@
 package my_practice;
 
-public class Tmp {
+import java.util.Arrays;
+import javax.swing.*;
 
-	public static void main(String[] args) {
-		for(int i =0;i<5;i++) {
-			System.out.println('a'+i);
+class S_Reverse{
+	void Reverse(String str) {
+		
+		char[] change = new char[str.length()];
+		int cnt = 0;
+		for(int i = str.length(); i<=0; i--) {
+			change[cnt++] = str.charAt(i);
 		}
-
+		System.out.println(Arrays.toString(change));
 	}
+public class Tmp {
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+
+	
 
 }
