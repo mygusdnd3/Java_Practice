@@ -1,27 +1,43 @@
 package day06;
 
+import java.util.Arrays;
+
 public class Test01 {
 	public static void main(String[] args) {
-		//1부터 10까지 출력하세요. while문으로 처리하세요
+
+		//배열을 만든다.
 		
-		int i = 1;
+		char[] chArr = new char[10];
 		
-		while(i <= 10) {
-			System.out.println(i);
+		loop:
+		for(int i = 0; i< chArr.length; i++) {
+			char ch = (char)(Math.random() * ('j' - 'a' +1)+'a' );
+			//이전 인덱스에 들어있는 데이터 까지 반복해서 검사한다.
 			
-			i++;
-			
+			for(int j =0; j<i; j++) {
+				if(chArr[j] == ch) {
+					i--;
+					continue loop;
+					}
+				
+				}
+			chArr[i] = ch;
 		}
 		
-		
-		boolean bool = true;
-		
-		while(bool){
-			if(1== 1) {
-				bool = false;
+		for(int i = 0; i< chArr.length -1; i++) {
+			for(int j = i+1; j< chArr.length; j++) {
+				char ch01 = chArr[i];
+				char ch02 = chArr[j];
+				char tmp =' ';
+				
+				if(ch01>ch02) {
+					tmp = ch01;
+					chArr[i] = ch02;
+					chArr[j] = tmp;
+				}
 			}
-		}//탈출할수있는 건덕지가 없으면 아래가 에러뜸
-		System.out.println("*******");
-			
+		}
+		System.out.println(Arrays.toString(chArr));
+		
 	}
 }

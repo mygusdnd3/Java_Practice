@@ -1,7 +1,5 @@
 package day10;
 
-import java.util.Arrays;
-
 /*
  	문제 3]
  	
@@ -25,53 +23,152 @@ import java.util.Arrays;
  * 
 	// 입력
  */
-
-import javax.swing.*;
-
-
+import javax.swing.JOptionPane;
 
 public class Ex03 {
-	public Ex03(){
+
+	// 1. 점수를 입력한다 10/20/30/40
+	// 2. substring으로 점수를 빼서 총점을 계산
+	// 3. 총점안에서 석차계산
+
+	// 생성자 생략가능
+	// public Ex03() {}
+
+
+
+	public int pointSum(int[] arrScore) {
+
+		int sumTotal = 0;
+		for (int i = 0; i < arrScore.length; i++) {
+			sumTotal += arrScore[i];
+		}
 		
+		return sumTotal;
 	}
-	
-	int[][] st = new int[5][4];
-	
+
 	public void setPoint() {
-		
-		for(int i = 0; i<st.length; i++) {
+		int[] totalArr = new int[5]; // 5명의 총점을 집어넣는다.
+		for (int i = 0; i < totalArr.length; i++) {
 			String str = JOptionPane.showInputDialog("점수를입력");
-			for(int j = 0; j<st[i].length;i++) {
-				st[i][j] = Integer.parseInt(str.split("/"));
+
+			int startIdx = 0;
+			int endIdx = 0;
+			int[] arr = new int[4];
+			int tempIdx = 0;
+
+			while (endIdx != -1) {
+				endIdx = str.indexOf("/", startIdx);
+
+				String score = "";
+				if (endIdx == -1) {
+					score = str.substring(startIdx);
+
+				} else {
+					score = str.substring(startIdx, endIdx);
+				}
+				arr[tempIdx] = Integer.parseInt(score);
+				tempIdx++;
+				startIdx = endIdx + 1 ;
 			}
 			
-				
+			
+			//4과목의 SUM값을 totalArr i번지에 저장
+			totalArr[i] = pointSum(arr);
+			
+			
 		}
-		for(int i = 0 ; i<st.length;i++) {
-			for(int j = 0; j<st[i].length;j++) {
-				System.out.println(st[i]);
+		int[] rankArr =	rank(totalArr);
+		
+		toPrint(rankArr); 
+	}
+
+	public int[] rank(int[] totalArr) {
+		int temp = 0;
+		for (int i = 0; i < totalArr.length; i++) {
+			// System.out.println("totalArr[" + i + "] => " + totalArr[i]);
+			for (int j = 0; j < totalArr.length - 1; j++) {
+				if (totalArr[j] < totalArr[j + 1]) {
+					temp = totalArr[j];
+					totalArr[j] = totalArr[j + 1];
+					totalArr[j + 1] = temp;
+				}
 			}
 		}
-		
+		return totalArr;
 		
 		
 	}
 	
+	public void toPrint(int[] rankArr) {
+		
+		for (int i = 0; i < rankArr.length; i++) {
+			System.out.println((i + 1) + "등 => " + rankArr[i]);
+		}
+	}
 	
-	
-	
+
+	public void setPoint_backup() {
+		int[] totalArr = new int[5]; // 5명의 총점을 집어넣는다.
+		// 5명 돌림
+		for (int i = 0; i < totalArr.length; i++) {
+			String str = JOptionPane.showInputDialog("점수를입력");
+
+			int sumTotal = 0;
+			int startIdx = 0;
+			int endIdx = 0;
+
+			while (endIdx != -1) {
+				endIdx = str.indexOf('/', startIdx + 1);
+
+				String score = "";
+				if (endIdx == -1) {
+					score = str.substring(startIdx);
+				} else {
+					score = str.substring(startIdx, endIdx);
+				}
+
+				sumTotal += Integer.parseInt(score);
+
+				// System.out.println("startIdx=> "+startIdx+ ", endIdx =>"+ endIdx +", score =>
+				// " + score);
+				// System.out.println("sumTotal => " + sumTotal);
+
+				startIdx = endIdx + 1;
+			}
+
+			totalArr[i] = sumTotal;
+		} // for문 End
+		int temp = 0;
+		for (int i = 0; i < totalArr.length; i++) {
+			// System.out.println("totalArr[" + i + "] => " + totalArr[i]);
+			for (int j = 0; j < totalArr.length - 1; j++) {
+				if (totalArr[j] < totalArr[j + 1]) {
+					temp = totalArr[j];
+					totalArr[j] = totalArr[j + 1];
+					totalArr[j + 1] = temp;
+				}
+			}
+		}
+
+		for (int i = 0; i < totalArr.length; i++) {
+			System.out.println((i + 1) + "등 => " + totalArr[i]);
+		}
+
+		/*
+		 * 
+		 * for (int i = 0; i < alpha.length-1; i++) { for (int j = 0; j < i; j++) if
+		 * (alpha[i] > alpha[j]) { char tmp = alpha[i]; alpha[i] = alpha[j]; alpha[j] =
+		 * tmp;
+		 * 
+		 * }
+		 * 
+		 * }
+		 */
+	}
+
 	public static void main(String[] args) {
-		
-		
-			String str = "10/20/30/40";
-			//
-			String data[] = str.split("/");
-			
-			for(int i = 0; i<data.length;i++) {
-				System.out.println(data[i]);
-			}
-		}
-		
+		Ex03 e = new Ex03();
+		e.setPoint();
 	}
 
-
+}
