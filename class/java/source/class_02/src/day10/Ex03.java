@@ -50,7 +50,7 @@ public class Ex03 {
 		int[] totalArr = new int[5]; // 5명의 총점을 집어넣는다.
 		for (int i = 0; i < totalArr.length; i++) {
 			String str = JOptionPane.showInputDialog("점수를입력");
-
+			// 10/20/30/40
 			int startIdx = 0;
 			int endIdx = 0;
 			int[] arr = new int[4];
@@ -58,14 +58,14 @@ public class Ex03 {
 
 			while (endIdx != -1) {
 				endIdx = str.indexOf("/", startIdx);
-
+				System.out.println("endIdx => "+endIdx);
 				String score = "";
 				if (endIdx == -1) {
 					score = str.substring(startIdx);
 
 				} else {
 					score = str.substring(startIdx, endIdx);
-				}
+				} 
 				arr[tempIdx] = Integer.parseInt(score);
 				tempIdx++;
 				startIdx = endIdx + 1 ;
