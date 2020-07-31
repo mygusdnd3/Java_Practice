@@ -2,9 +2,10 @@ package tmp;
 
 public class BlahBlah {
 
-		public BlahBlah() {
-			
-		}
+	public BlahBlah() {
+
+	}
+
 	public static void main(String[] args) {
 		new BlahBlah();
 
@@ -12,11 +13,15 @@ public class BlahBlah {
 
 }
 
-class TodayMenu{
-	 
-	 
+class Member {
+	int mno;
+	String id, name, mail, tel;
+	char gen;
 	
-	public void setMenu(String menu1, String menu2, String menu3) {
-		 
+	public void setData(String id, String name, String mail, String tel, char gen) {
+		this.id = id;
+		
+				
+		
 	}
 }
