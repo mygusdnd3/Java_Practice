@@ -98,7 +98,7 @@ public class Ex02 {
 	}
 	public void PersonArr() {
 		setArr();
-		GuaMouk[] gmArr = new GuaMouk[3];
+		GuaMouk[] gmArr = new GuaMouk[java.length];
 		for (int i = 0; i < gmArr.length; i++) {
 			gmArr[i] = new GuaMouk();
 			System.out.println("******"+(i+1)+"번째 ******");
