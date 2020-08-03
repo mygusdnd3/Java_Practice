@@ -1,5 +1,7 @@
 package day12;
 
+import tmp.SongTrack;
+
 /*
  	1.
  	1 노래 한곡을 저장할 클래스를 정의하고
@@ -83,6 +85,6 @@ class Track { // 트랙이 12개가 앨범 1장.
 }
 
 class MyAlbum { // ?
-	Track[] track = new Track[12];
+	SongTrack[] track = new SongTrack[12];
 
 }

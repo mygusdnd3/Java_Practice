@@ -1,6 +1,8 @@
 /*
 		System.out.println("삼각형의 넓이는 : " + hight * bottom * 0.5);
 		System.out.println("사각형의 넓이는 : " + hight * bottom);
+		면적 계산해서 대입해주는 함수
+		area = rad * rad * PI
 	원 둘레 계산해서 대입해주는 함수
 		arround = 2 * rad * PI;
 			
