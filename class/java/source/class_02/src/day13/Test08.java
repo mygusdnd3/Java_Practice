@@ -21,7 +21,11 @@ public class Test08 {
 		
 		
 		
+<<<<<<< HEAD
+		 
+=======
 		
+>>>>>>> 0b0395a496390f23efad4e87f95ccd1d88fd0ae5
 		
 		Nemo n1 = nemo1;
 		Nemo n2 = nemo2;
