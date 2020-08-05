@@ -23,7 +23,7 @@ public class Ex01 {
 			if (num % 2 == 0) {
 				t01 = new Even01();
 				t01.display();
-			} else {
+	 		} else {
 				t01 = new Odd01();
 				t01.display();
 			}
