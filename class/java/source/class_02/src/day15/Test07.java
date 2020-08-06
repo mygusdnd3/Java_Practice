@@ -24,9 +24,14 @@ public class Test07 {
 		for (int i = 0; i < 10; i++) {
 			int rdn = (int) (Math.random() * 15 + 0 - 1) + 1;
 			int rdn2 = (int) (Math.random() * 15 + 0 - 1) + 1;
+			
 			if (rdn % 3 == 0) {
-				t1[i] = new Sagak(rdn, rdn2);
-			} else if (rdn % 3 == 1) {
+				try {
+					t1[i] = new Sagak(rdn,rdn2 );
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			} else if (rdn % 3 == 1) { 
 				t1[i] = new Samgak(rdn, rdn2);
 			} else if (rdn % 3 == 2) {
 				t1[i] = new Won(rdn);
