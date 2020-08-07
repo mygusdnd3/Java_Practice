@@ -100,3 +100,13 @@ String.format() 예제
 		왜냐면 주소하나만 해버리면 다 한군데만 쳐보고있어서 값이 죶같이된다.
 		
 		
+		
+			int cno = JOptionPane.showConfirmDialog(main.f, "프로그램을 종료할까요?","##프로그램 종료 ##", JOptionPane.YES_NO_CANCEL_OPTION);
+		// yes = 0 , no = 1 cancel = 2 반환
+		
+		
+		
+		//ColorPick 초기화
+		cPick = new ColorPick(this); //ColorClass의 "주소"만 넘겨줌
+		this로 받았은 곳에서는 main의 주소의 값에 접근이 가능하다.
+		
