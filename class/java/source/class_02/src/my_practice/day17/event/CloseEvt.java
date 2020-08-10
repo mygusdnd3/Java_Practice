@@ -4,5 +4,10 @@ public class CloseEvt {
 
 	public CloseEvt() {
 	}
+	
+	public String toString() {
+		return null;
+		
+	}
 
 }
