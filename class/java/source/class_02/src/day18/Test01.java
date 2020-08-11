@@ -16,7 +16,7 @@ public class Test01 {
 					// 이 부분에서 강제로 우리가 정한 예외 클래스의 예외를 발생시켜야 한다.
 					// 따라서 우리가 만든 예외 클래스를 강제로 던져야 한다.
 					throw new Except01();
-				}
+				} 
 				else {
 					bool = false;
 				}
@@ -25,6 +25,7 @@ public class Test01 {
 				continue;
 			} catch (Except01 e) {		//toString을 이용하여 문자열을 리턴받는다.
 				JOptionPane.showMessageDialog(null, e.toString());
+			//	System.out.println(e);
 				continue;
 			} catch (Exception e) {
 				continue;
