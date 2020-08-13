@@ -18,10 +18,10 @@ import java.util.*;
 
 import javax.swing.JOptionPane;
 
-public class Ex03 {
+public class Ex3_copy {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public Ex03() {
+	public Ex3_copy() {
 
 		ArrayList list = new ArrayList();
 		list.add("고길동");
@@ -32,12 +32,11 @@ public class Ex03 {
 
 		ArrayList result = new ArrayList();
 		for (int i = 0; i < 5; i++) {
-			result.add(setStud((String)list.get(i)));
-			
+			Stud_Class std = setStud();
+			std.setName((String) list.get(i));
+			result.add(std);
 		}
 
-		
-		
 		boolean bool = true;
 		while (bool) {
 			String ScoreCheck = JOptionPane.showInputDialog("정렬 방식을 선택하세요 \n JAVA /DB/WEB/JSP/TOTAL");
@@ -53,10 +52,7 @@ public class Ex03 {
 
 					@Override
 					public int compare(Object o1, Object o2) {
-						Stud_Class std1 = (Stud_Class) o1;
-						Stud_Class std2 = (Stud_Class) o2;
-						int res = std1.getJava() - std2.getJava();
-						return res > 0 ? 1 : -1;
+						return ((Stud_Class) o1).getJava() - ((Stud_Class) o2).getJava();
 					}
 
 				});
@@ -69,10 +65,7 @@ public class Ex03 {
 
 					@Override
 					public int compare(Object o1, Object o2) {
-						Stud_Class std1 = (Stud_Class) o1;
-						Stud_Class std2 = (Stud_Class) o2;
-						int res = std1.getDb() - std2.getDb();
-						return res > 0 ? 1 : -1;
+						return ((Stud_Class) o1).getDb() - ((Stud_Class) o2).getDb();
 					}
 
 				});
@@ -82,13 +75,10 @@ public class Ex03 {
 			} else if (ScoreCheck.equals("WEB") | ScoreCheck.equals("web")) {
 				System.out.println("WEB 점수에 대한 정렬 결과입니다");
 				Collections.sort(result, new Comparator() {
- 
+
 					@Override
 					public int compare(Object o1, Object o2) {
-						Stud_Class std1 = (Stud_Class) o1;
-						Stud_Class std2 = (Stud_Class) o2;
-						int res = std1.getWeb() - std2.getWeb();
-						return res > 0 ? 1 : -1;
+						return ((Stud_Class) o1).getWeb() - ((Stud_Class) o2).getWeb();
 					}
 
 				});
@@ -101,18 +91,14 @@ public class Ex03 {
 
 					@Override
 					public int compare(Object o1, Object o2) {
-						Stud_Class std1 = (Stud_Class) o1;
-						Stud_Class std2 = (Stud_Class) o2;
-						int res = std1.getJsp() - std2.getJsp();
-						return res > 0 ? 1 : -1;
+						return ((Stud_Class) o1).getJsp() - ((Stud_Class) o2).getJsp();
 					}
-
 				});
 				for (Object o : result) {
 					System.out.println(o);
 				}
 			}
-			
+
 			else {
 
 				JOptionPane.showMessageDialog(null, "잘못 입력하셨습니다.");
@@ -122,56 +108,25 @@ public class Ex03 {
 		}
 
 	}
-	public Comparator getComp(String sub) {
-		Comparator c = null;
-		switch(sub){
-			case "name":
-				c = (Comparator)sort.get(0);
-				break;
-			case "total":
-				
-				break;
-			case "name":
-				
-				break;
-			case "name":
-				
-				break;
-			case "name":
-				
-				break;
-			case "name":
-				
-				break;
-		}
-		return c;
-	}
 
-	Stud_Class setStud(String name) {
+	Stud_Class setStud() {
 		Stud_Class stud = new Stud_Class();
-		stud.setName(name);
 		ArrayList score = new ArrayList();
-		for(int i = 0; i <4; i++) {
+		for (int i = 0; i < 4; i++) {
 			score.add((int) (Math.random() * 100 - 1 + 1) + 1);
 		}
-		stud.setJava((int)score.get(0));
-		stud.setDb((int)score.get(1));
-		stud.setWeb((int)score.get(2));
-		stud.setJsp((int)score.get(3));
+		stud.setJava((int) score.get(0));
+		stud.setDb((int) score.get(1));
+		stud.setWeb((int) score.get(2));
+		stud.setJsp((int) score.get(3));
 		stud.setTotal();
-		/*
-		stud.setJava((int) (Math.random() * 100 - 1 + 1) + 1);
-		stud.setDb((int) (Math.random() * 100 - 1 + 1) + 1);
-		stud.setWeb((int) (Math.random() * 100 - 1 + 1) + 1);
-		stud.setJsp((int) (Math.random() * 100 - 1 + 1) + 1);
-		stud.setTotal();
-*/
+	
 		return stud;
 
 	}
 
 	public static void main(String[] args) {
-		new Ex03();
+		new Ex3_copy();
 	}
 
 }
