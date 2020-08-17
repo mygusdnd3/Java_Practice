@@ -27,9 +27,10 @@ public class Test09 {
 			Nemo n = (Nemo)map.get(key);
 			int value = n.getArea();
 //			int value = ((Nemo) map.get(key)).getArea();
-			System.out.print("key  : "+key+" | 면적 :"+value);
-			System.out.println();
-			System.out.println(n);
+//			System.out.print("key  : "+key+" | 면적 :"+value);
+//			System.out.println();
+//			System.out.println(n);
+			System.out.println(map.entrySet());
 					
 		}
 	}

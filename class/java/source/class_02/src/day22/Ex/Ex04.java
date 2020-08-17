@@ -29,7 +29,7 @@ public class Ex04 {
 		setNames();
 		TreeMap map = new TreeMap();
 
-		ArrayList list = new ArrayList(names);
+		ArrayList<String> list = new ArrayList<String>(names);
 
 		Stud[] stud = new Stud[5];
 		for (int i = 0; i < 5; i++) {
