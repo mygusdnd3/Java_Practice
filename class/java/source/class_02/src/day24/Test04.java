@@ -33,7 +33,7 @@ public class Test04 {
 			System.out.println("입력한 문장 : "+str+len);
 			*/
 			//3. 여러 문자를 받아서 출
-			byte[] buff = new byte[256];
+			byte[] buff = new byte[1024];
 			Arrays.fill(buff, (byte)'A');
 			for (int i = 0; i < buff.length; i++) {
 				if(i < 5 | i > 250) {

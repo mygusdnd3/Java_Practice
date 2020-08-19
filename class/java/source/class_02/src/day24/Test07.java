@@ -18,7 +18,7 @@ public class Test07 {
 	 */
 		FileInputStream fin = null;
 		FileOutputStream fout = null;
-		try {
+		try { 
 			//스트림 두개를 만든다
 			fin = new FileInputStream("C:\\Users\\class02\\Downloads\\Downloads.7z");
 			fout = new FileOutputStream("C:\\Users\\class02\\Downloads\\Downloads2.7z");

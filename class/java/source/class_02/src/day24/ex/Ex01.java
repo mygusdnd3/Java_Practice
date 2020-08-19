@@ -21,7 +21,7 @@ public class Ex01 {
 		BufferedWriter bw = null;
 		
 		Date d = null;
-		try {
+		try { 
 			fr = new FileReader("src/day24/Test04.java");
 			br = new BufferedReader(fr);
 			
