@@ -30,7 +30,7 @@ public class Ex02 {
 		for(Object o : list) {
 			System.out.println(o);
 		}
-		
+		 
 		System.out.println("Area_Sort");
 		Collections.sort(list);
 		
