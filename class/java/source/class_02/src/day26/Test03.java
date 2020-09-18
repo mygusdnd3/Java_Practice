@@ -41,15 +41,15 @@ public class Test03 {
 			//따라서 이제 질의명령을 실행해 달라고 요청만 하면 된다.
 			
 			//질의명령 실행 요청하고 결과받고
+			boolean result = pstmt.execute();
 			rs = pstmt.executeQuery();
-			
 			// 작업 행 이동시키고
 			rs.next();
 			// 데이터 꺼내고 <== 이제 작업행은 실제 결과 첫번째 행으로 이동한 상태이므로
 			// 필요한 데이터를 꺼내기만 하면 된다.
 			String name = rs.getString("name");
 			
-			
+			System.out.println(result);
 			// 출력한다
 			
 			JOptionPane.showMessageDialog(null, "입력한아이디"+sid+"는"+name+"회원이 사용중입니다.");
