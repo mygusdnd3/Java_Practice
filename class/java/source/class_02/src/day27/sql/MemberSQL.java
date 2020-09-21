@@ -14,20 +14,20 @@ public class MemberSQL {
 		
 			switch(code) {
 			case SEL_ID_LIST:
-				buff.append("SELECT ");
-				buff.append("  id ");
-				buff.append("FROM ");
-				buff.append(" member01 ");
-				buff.append("WHERE ");
-				buff.append("  isshow = 'Y'");
+				buff.append("select ");
+				buff.append("	id");
+				buff.append("from ");
+				buff.append("	member01 ");
+				buff.append("where ");
+				buff.append("	isshow = 'Y'");
 				break;
 			case SEL_ID_INFO:
-				buff.append("SELECT ");
-				buff.append("	mno,id,name,pw,mail,tel,gen,avt,joindate ");
-				buff.append("FROM ");
-				buff.append(" member01 ");
-				buff.append("WHERE");
-				buff.append(" id = ?");
+				buff.append("select ");
+				buff.append("	mno, id, name, pw, mail, tel, gen, avt, joindate ");
+				buff.append("from ");
+				buff.append("	member01 ");
+				buff.append("where ");
+				buff.append("	id = ?");
 				break;
 			case SEL_ID_CNT:
 				buff.append("SELECT ");
