@@ -80,7 +80,7 @@ public class Test01 {
 		
 		
 		 con = db.getCon();
-		sql = "Insert into member01 VALUES("
+		sql = "Insert into member01(id,name,mail,tel,gen,avt) VALUES(?,?,?,?,?,?)";
 		
 		ppst = db.getPSTMT(con, sql);
 		
