@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상 선택자</title>
+<style type="text/css">
+	body{
+		text-align: center;
+	
+	}
+	
+	div{
+		display: inline-block;
+		width: 450px;
+		padding: 0px;
+		text-align: center;
+	}
+	
+	a{
+		display: block;
+		margin: 10px;
+		padding: 10px;
+		background-color: gray;
+		font-size: 30px;
+		
+	}
+	a:visited{
+		color: red;
+		text-decoration: under_line;
+	}
+	a:link{
+		color:lime;
+		text-decoration: none;
+	}
+	a:active{
+		color: pink;
+	}
+	a:hover{
+	 border: 3px dotted black;
+	 color: red;
+	}
+	/* 
+		border 속성
+		
+			형식	]
+				border: 굵기	라인형태	라인컬러;
+					라인형태]
+						solid		-실선
+						dotted		
+						dashed
+						double
+	
+	
+	 */
+	 
+	 #d1{
+	 	height: 50px;
+	 	width: 200px;
+	 	margin: 10px;
+	 	border: 3px solid violet;
+	 }
+	 #d2{
+	 	height: 50px;
+	 	width: 200px;
+	 	margin: 10px;
+	 	border: 3px dotted pink;
+	 }
+	 #d3{
+	 	height: 50px;
+	 	width: 200px;
+	 	margin: 10px;
+	 	border: 3px dashed orange;
+	 }
+	 #d4{
+	 	height: 50px;
+	 	width: 200px;
+	 	margin: 10px;
+	 	border: 3px double red;
+	 }
+	 
+	 .dv{
+	 
+	 	display: block;
+	 	padding: 0px;
+	 	margin-top: 20px;
+	 }
+	 label{
+	 	display: inline-block;
+	 	width: 200px;
+	 	height: 25px;
+	 	font-size: 16pt;
+	 	text-align: right;
+	 }
+	 
+	 input{
+	 	display: inline-block;
+	 	width: 250px;
+	 	height: 25px;
+	 	border: 1px solid violet;
+	 	font-size: 16pt;
+	 	text-align: center;
+	 }
+	 input:focus{
+	 	outline: none;
+	 	border: 3px dotted blue;
+	 	background-color: lightgreen;
+	 }
+	 
+</style>
+</head>
+<body>
+	<div>
+		<a href="Test01.html">Test01 01</a>
+		<a href="Sample.html">sample</a>
+		
+		<div id="d1">soild</div>
+		<div id="d2">dotted</div>
+		<div id="d3">dashed</div>
+		<div id="d4">double</div>
+		
+		<div class="dv">
+			<label for="id">아이디 : </label>
+			<input type="text" id="id" placeholder="아이디입력">
+		</div>
+		<div class="dv">
+			<label for="addr">주소 : </label>
+			<input type="text" id="addr" placeholder="주소입력">
+		</div>
+
+	</div>
+</body>
+</html>

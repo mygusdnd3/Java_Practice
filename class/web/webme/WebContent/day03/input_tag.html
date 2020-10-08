@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input Tag</title>
+<style>
+	label{
+		display: inline-block;
+		width: 80px;
+		/* 위에있는 태그와의 간격 */
+		margin-top: 10px;
+		text-align: right;
+		padding-right: 5px;
+		
+	}
+	input{
+		width: 200px;
+		height: 30px;
+		border: 1px solid gray;
+	
+	}
+	input[type="radio"],input[type="checkbox"]{
+		width: 20px;
+		height: 20px;
+	}
+</style>
+</head>
+<body>
+	<!-- 
+		HTML에서 입력을 받는 태그
+			input
+				입력을 받을 수 있는 태그
+				type	]
+					text		- 텍스트를 입력받는 타입
+					password	- 비밀번호를 입력받는 타입
+					radio		- 라디오버튼을 만들 수 있는 타입
+					button		- 버튼을 만드는 타입
+					submit		- 폼(form)의 데이터를 전송하는 버튼을 만드는 타입
+					file 		- 파일을 선택하는 기능을 만드는 타입
+					hidden		- 넘길 데이터를 화면에 보이지 않게 하는 타입
+					--단일행입력
+					
+			textarea
+				다중행 입력을 받을 수 있는 태그
+			select
+				셀렉트 박스를 만드는 태그
+		
+		참고	]
+			input 태그와 함께 사용하는 태그로
+			label 태그를 많이 사용한다.
+			label의 속성중 for 속성은 해당 라벨이 클릭이 됬을 경우
+			포커스가 맞춰질 태그를 지정하는 속성..
+			
+			
+	*****
+	중요	]
+		submit 타입의 input 태그가 클릭이 되면
+		그 태그를 감싸고 있는 form 태그의 input 태그의 내용을
+		요청 페이지로 전송한다. 폼태그 안에있는 인풋태그
+		
+	참고	]
+	
+		form 태그
+			요청 페이지로 데이터를 전송을 할 때
+			여러개의 데이터를 한번 작업으로 전송할 목적으로 사용하는 태그
+			이때 form 태그의 input 태그의 내용이 전송이 되는데
+			form 개체로 전송이 되거나 파라미터로 전송이 된다.
+			
+				주요 속성] 
+					method : 데이터 전송 방식
+					action : 데이터를 전송할 페이지
+					
+			
+	 -->
+	 
+	 <form method="GET" action="Test07.html">
+	<!--  <form method="POST" action="Test07.html">/ -->
+	 	<label for="id">아이디 : </label>
+	 	<input type="text" id="id" name="sid"><br>
+	 	<!-- for와 input을 id값으로 명시적으로 연결 -->
+	 	<label for="pw">비밀번호 : </label>
+	 	<input type="password" id="pw" name="spw"><br>
+	 	<!-- submit은 submit이 들어있는애들을 전송한다. -->
+	 	<input type="hidden" name="avt" value="11">
+	 	<div style="width: 297px; padding: 0px;">
+	 	<label>성별 : </label>
+	 	<input type="radio" name="gen" value="M"><span>남 자</span>
+	 	<input type="radio" name="gen" value="F"><span>여 자</span>
+	 	<label>관심사항 : </label>
+	 	<input type="checkbox" name="fab" value="java"><span>java</span>
+	 	<input type="checkbox" name="fab" value="db"><span>database</span>
+	 	<input type="checkbox" name="fab" value="html"><span>html</span>
+	 	<input type="checkbox" name="fab" value="jsp"><span>jsp</span>
+	 	<input type="checkbox" name="fab" value="spring"><span>spring</span>
+	 	<input type="checkbox" name="fab" value="web"><span>web</span>
+	 	</div>
+	 
+	 	<div>
+	 	<label for="cars">Choose a car: </label>
+	 	<select name ="cars" id="cars">
+	 		<option value="volvo">Volvo</option>
+	 		<option value="hyndai">hyndai</option>
+	 		<option value="audi">audi</option>
+	 	</select>
+	 	</div>
+	 	<div>
+	 	<label for="body">Message</label>
+	 	<textarea id="body" name ="body" rows="10" cols="30" style="resize: none; width: 297;"placeholder="메세지입력!!!"></textarea>
+	 	</div>
+	 	<input type="submit" id="submit" value="submit" style="width:290px;margin-top:10px;">
+	 	<!-- input 데이터에서 value 속성값이 넘어간다. -->
+	</form>
+	<br>
+	<form> 
+		<label for="name">이름 : </label>
+	 	<input type="text" id="name" name="name"><br>
+		<label for="addr">주소 : </label>
+	 	<input type="text" id="addr" name="addr"><br>
+		<label for="tel">전화번호 : </label>
+	 	<input type="text" id="tel" name="tel"><br>
+		<label for="gen">성별 : </label>
+	 	<input type="text" id="gen" name="gen"><br>
+		<label for="msg">메세지 : </label>
+	 	<input type="text" id="msg" name="msg"><br>
+	 	
+	 	
+	 	
+	 	
+	 	
+	</form>
+
+</body>
+
+</script>
+</html>

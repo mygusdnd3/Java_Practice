@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+			text-align: center;
+		}
+		
+		.content{
+			display: inline-block;
+			width: 500px;
+		}
+		h2{
+			padding: 20px;
+			background-color: orangered;
+			color: white;
+		}
+		.box{
+			display: inline-block;
+			width: 100px;
+			text-align: left;
+		}
+		input:checked{
+			
+			width: 50px;
+			height: 50px;
+		}
+		
+		.content> *:first_child {/* 모든 자식태그중에 첫번째자식  */
+			background-color: red;
+		}
+		.content> div:nth-child(3n){
+			border:2px solid teal;
+		}
+		
+		
+		.content > div:nth-last-child(3n){
+			background-color: thistle;
+		}
+		h2, label{
+		
+			color: crimson;
+		
+		}
+		.content > div:last-child > label{
+			color: lightseagreen;
+		}
+		
+		div:nth-child(2n) > label{
+			color: orange;
+		}
+</style>
+</head>
+<body>
+	<div class="content">
+	<h2> 수강 과목 선택 </h2>
+		<div class="box">
+			<input type="checkbox" name="fab" value="java"><label for="java" >JAva</label>
+		</div>
+		<div class="box">
+		<input type="checkbox" name="fab" value="Oracle"><label for="oracle">Oracle</label>
+		</div>
+	
+		<div class="box">
+		<input type="checkbox" name="fab" value="html5"><label for="html5" checked>html5</label>
+		</div>
+
+		<div class="box">
+		<input type="checkbox" name="fab" value="css3"><label for="css3">css3</label>
+		</div>
+
+		<div class="box">
+		<input type="checkbox" name="fab" value="javascript"><label for="javascript">javascript</label>
+		</div>
+
+		<div class="box">
+		<input type="checkbox" name="fab" value="k2"><label for="k2">k2</label>
+		</div>
+		<div class="box">
+		<input type="checkbox" name="fab" value="k3"><label for="k3">k3</label>
+		</div>
+		<div class="box">
+		<input type="checkbox" name="fab" value="k4"><label for="k4">k4</label>
+		</div>
+		<div class="box">
+		<input type="checkbox" name="fab" value="k5"><label for="k5">k5</label>
+		</div>
+
+	
+		</div>
+</body>
+</html>

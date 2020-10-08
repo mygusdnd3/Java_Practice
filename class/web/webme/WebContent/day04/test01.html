@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <style type="text/css">
+ 	html, body{
+ 		height: 100%;
+ 		margin: 0px;
+		padding: 0px;
+ 	}
+ 	/* body{
+ 		text-align: center;
+ 	} */
+ 	h2{
+ 		color: red!important;/* !important가 붙으면 하위 인라인스타일시트에서도 강제로 적용*/
+ 	}
+ 	*{
+ 		text-align: center;
+ 	}
+ 	.p1{
+ 		font-weight: bold;
+ 		color: green;
+ 	}
+	.pt16{
+	
+ 		font-size: 30pt;
+	}
+	.pt20{
+	
+ 		font-size: 20pt;
+	}
+	.h3{
+		padding: 20px;
+		background-color: purple;
+		color: white;
+	}
+	
+	#h31{
+		display: inline-block;
+		whith: 250px;
+	}
+	
+	[type]{
+	/* 
+		type 속성을 가지고 있는 태그를 선택해서
+		아래 속성을 부여하겠다.
+	
+	 */
+		display: inline-block;
+		width: 250px;
+		height: 25px;
+		border: 1px solid gray;
+	}
+	input[type="text"]{
+		border-color: blue;
+	}
+	
+	input[type="password"]{
+		border-color:red;
+	}
+	input
+	
+ 	</style>
+</head>
+<!-- 
+	태그 속성
+	
+		text-align	: 텍스트 혹은 컨텐츠의 가로 정렬 방식을 적용시키는 속성
+			속성값	:	right, left, center
+		margin		: 이웃 태그와의 간격
+		padding		: 태그 내용과 태그의 테두리(border)와의 간격
+		
+		width		: 태그의 가로길이를 지정하는 속성
+		height		: 태그의 세로길이를 지정하는 속성
+					  지정할 수 있는 태그는 block 태그 또는 inline-block 태그만 적용된다.
+		border		: 태그의 테두리를 지정하는 속성
+					  태그의 사이즈에 border는 포함되지 않는다.		
+		
+		css에서 주석처리
+			/*  */ 로 처리한다.
+ -->
+<body>
+	<h2 style="background-color: pink; color: indigo; margin: 0px; padding: 80px;">처음 만드는 스타일</h2>
+	<h2>처음중 두번째!</h2>
+	<p>여기는 <b>&lt;p&gt;</b> 태그</p>
+	<p class="p1 pt16">여기는 p1 클래스 1</p>
+	<p class="p2">여기는 p2 클래스 2</p>
+	<p class="p1 pt20">여기는 p1 클래스 1</p>
+	<div class="p1"><span>여기는 div 내의 span</span></div>
+	<h3 class="h3">여기는 h3 클래스 태그</h3>
+	<h3 class="h3">여기는 h3 클래스 태그</h3>
+	<h3 class="h3" id="h31">h31</h3>
+	<h3 class="h3">여기는 h3 클래스 태그</h3>
+	<h3 class="h3">여기는 h3 클래스 태그</h3>
+	
+	<input type="text" value="input1">
+	<input type="text" value="input1">
+	<input type="text" value="input1">
+	<input type="password" value="password">
+	<input type="button" value="button">
+	<input type="text" value="input1">
+</body>
+</html>

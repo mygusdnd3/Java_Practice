@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		color: lightslategray;
+		text-align: center;
+	}
+	.info{
+		display: block;
+	
+	}
+	p+h3 >.info {
+	color: blue;
+	}
+	.info > .info{ /* /info 클래스의 자식info클래스 */
+		color: red;
+	}
+	
+	body > div > h3{
+		color: peru;
+	}
+	
+	body > p{
+		color: lime;
+		background-color: moccasin;
+		padding: 5px;
+	}
+	
+	body > h3 > tel > hp{
+		color: green!important;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<h3>Child Selector 1</h3>
+	</div>
+	<p> 자식 선택자</p>
+	<h3>
+		<sno class="info">12345</sno>
+		<std class="info">이지우</std>
+		<tel class="info">
+			<office class="info">02-1234-1234</office>
+			<hp class="info">010-234-1234</hp>
+		</tel>
+		
+	</h3>
+</body>
+</html>
